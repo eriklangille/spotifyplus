@@ -1,2 +1,4 @@
 requests
 Flask
+python-dotenv
+mashumaro

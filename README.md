@@ -6,8 +6,8 @@ Do more with Spotify - CLI tool
 
 Python Virtual Environment
 ```
-python3 -m venv splus-env
-source splus-env/bin/activate
+python3 -m venv .venv
+source .env/bin/activate
 ```
 
 Install packages
