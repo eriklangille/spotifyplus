@@ -2,7 +2,6 @@ from queue import Queue
 import requests
 from urllib import parse
 import webbrowser
-import base64
 
 from splus import constants
 from splus.auth.access_token_handler import AccessTokenHandler
