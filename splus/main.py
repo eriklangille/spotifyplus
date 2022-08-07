@@ -1,11 +1,15 @@
 from splus.auth import authenticate
+from splus.commands.copy_playlist import CopyPlaylist
+from splus.utils.spotify_session import SpotifySession
 
 def main():
   print("Congrats its running!")
   auth = authenticate.Authenticate()
-  auth.request_permission()
-  token = auth.get_token()
+  token = auth.authenticate()
+  session = SpotifySession(token)
   print(token.scope, token.expires_in)
+  copy = CopyPlaylist(session)
+  copy.run()
 
 
 if __name__ == "__main__":

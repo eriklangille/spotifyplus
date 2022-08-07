@@ -55,8 +55,7 @@ class TestAuth(unittest.TestCase):
 
   def test_request_access_token(self):
     expected_token = AccessToken.from_dict(TOKEN_DATA)
-    self.auth._request_access_token("abcdef")
-    actual_token = self.auth._token
+    actual_token = self.auth._request_access_token("abcdef")
 
     mock_post : mock.MagicMock = self.auth._session.post
     mock_post.assert_called_once()

@@ -5,6 +5,7 @@ import webbrowser
 import base64
 
 from splus import constants
+from splus.auth.access_token_handler import AccessTokenHandler
 from splus.auth.callback_web_server import CallbackWebServer
 from splus.auth.queue_message import QueueMessage
 from splus.utils.random_string import random_string
@@ -17,9 +18,13 @@ class Authenticate:
     self._queue = Queue(2)
     self._session = requests.session()
     self._code : str = None
-    self._token : AccessToken = None
     self._state = random_string(8)
     self._server = CallbackWebServer(self._queue)
+    self._handler = AccessTokenHandler()
+  
+  def authenticate(self) -> AccessToken:
+    self.request_permission()
+    return self.get_token()
   
   def request_permission(self):
     self._server.start()
@@ -32,52 +37,15 @@ class Authenticate:
       self._code = message.code
     else:
       raise RuntimeError(message.error)
+    
+  def get_token(self) -> AccessToken:
+    if self._code:
+      return self._handler.get_token(self._code)
+    raise RuntimeError("Permission must be requested first")
   
-  def get_token(self):
-    ### TODO: refresh only when expired
-    if self._token:
-      self._request_refresh_token()
-    else:
-      self._request_access_token(self._code)
-    return self._token
-
   def _check_for_message(self) -> QueueMessage:
     return self._queue.get(block=True)
 
-  def _request_access_token(self, code : str) -> None:
-    headers = self._generate_token_headers()
-    data = {
-      "grant_type": constants.GRANT_TYPE,
-      "code": code,
-      "redirect_uri": constants.REDIRECT_URI
-    }
-    self._post_token_request(headers, data)
-  
-  def _request_refresh_token(self):
-    refresh_token = self._token.refresh_token
-    headers = self._generate_token_headers()
-    data = {
-      "grant_type": constants.GRANT_TYPE_REFRESH,
-      "refresh_token": refresh_token
-    }
-    self._post_token_request(headers, data)
-  
-  def _post_token_request(self, headers : dict[str, str], data : dict[str, str]) -> None:
-    res = self._session.post(constants.TOKEN_URI, headers=headers, data=data)
-    if res.status_code == 200:
-      try:
-        self._token : AccessToken = AccessToken.from_json(res.text)
-      except:
-        print("uh oh")
-    else:
-      print(res.status_code, res.raw)
-
-  def _generate_token_headers(self) -> dict[str, str]:
-    return {
-      'Authorization': f'Basic {str(base64.b64encode(f"{constants.CLIENT_ID}:{constants.CLIENT_SECRET}".encode("ascii")), encoding="ascii")}',
-      'Content-Type': 'application/x-www-form-urlencoded'
-    }
-  
   def _generate_auth_data(self) -> dict[str, str]:
     return self._encode_url({
       "response_type": constants.RESPONSE_TYPE,
