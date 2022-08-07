@@ -1,6 +1,7 @@
 import unittest
 import requests
 import base64
+import json
 from unittest import mock
 from splus.auth.access_token import AccessToken
 
@@ -20,17 +21,18 @@ MOCK_DECODE = "123:abc"
 
 def mocked_requests_post(*args, **kwargs):
   class MockResponse:
-    def __init__(self, json, status_code):
-      self.json = json
+    def __init__(self, json_data, json_func, status_code):
+      self.json = json_func
+      self.text = json.dumps(json_data)
       self.status_code = status_code
     
     def json(self):
       return self.json_data
 
   if args[0] == constants.TOKEN_URI:
-    data = TOKEN_DATA
-    json = mock.MagicMock(return_value=AccessToken.from_dict(data))
-    return MockResponse(json, 200)
+    json_data = TOKEN_DATA
+    json_func = mock.MagicMock(return_value=AccessToken.from_dict(json_data))
+    return MockResponse(json_data, json_func, 200)
   
   return MockResponse(None, 404)
 
@@ -46,6 +48,7 @@ class TestAuth(unittest.TestCase):
   def setUp(self) -> None:
     self.auth = Authenticate()
     self.auth._session = mocked_requests_session()
+    self.auth._server.start()
   
   def tearDown(self) -> None:
     self.auth._server.shutdown()
@@ -69,3 +72,9 @@ class TestAuth(unittest.TestCase):
   def test_base64_encode(self):
     result = f"{str(base64.b64encode(MOCK_DECODE.encode('ascii')), encoding='ascii')}"
     assert result == MOCK_ENCODE
+
+  # def test_auth_expired(self):
+  #   token = AccessToken.from_dict(TOKEN_DATA)
+  #   assert token.is_expired() == False
+  #   token.expires_in = 0
+  #   assert token.is_expired() == True
