@@ -73,8 +73,8 @@ class TestAuth(unittest.TestCase):
     result = f"{str(base64.b64encode(MOCK_DECODE.encode('ascii')), encoding='ascii')}"
     assert result == MOCK_ENCODE
 
-  # def test_auth_expired(self):
-  #   token = AccessToken.from_dict(TOKEN_DATA)
-  #   assert token.is_expired() == False
-  #   token.expires_in = 0
-  #   assert token.is_expired() == True
+  def test_auth_expired(self):
+    token = AccessToken.from_dict(TOKEN_DATA)
+    assert token.is_expired() == False
+    token.expires_in = 0
+    assert token.is_expired() == True
