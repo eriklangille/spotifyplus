@@ -1,7 +1,7 @@
 import unittest
 import json
 from unittest import mock
-from splus.commands.copy_playlist import CopyPlaylist
+from splus.endpoints.playlists import PlaylistEndpoints
 
 from splus.utils.spotify_session import SpotifySession
 from splus.auth.access_token import AccessToken
@@ -27,7 +27,7 @@ def mocked_requests_get(uri : str, *args, **kwargs):
       return self.json_data
 
   if uri.startswith("playlists/") and uri.endswith("/tracks"):
-    f = open("./tests/playlist-list.json")
+    f = open("./tests/samples/get_playlist_items.json")
     json_data = json.load(f)
     json_func = mock.MagicMock(return_value=json_data)
     return MockResponse(json_data, json_func, 200)
@@ -39,9 +39,9 @@ def mocked_requests_session() -> mock.MagicMock:
   real.get = mock.MagicMock(side_effect=mocked_requests_get)
   return real
 
-class TestCopyPlaylist(unittest.TestCase):
-  def test_result(self):
-    self.command = CopyPlaylist(mocked_requests_session())
-    self.command.run()
-    mock_get : mock.MagicMock = self.command._session.get
+class TestPlaylistEndpoints(unittest.TestCase):
+  def test_get_playlist_items(self):
+    self.endpoint = PlaylistEndpoints(mocked_requests_session())
+    self.endpoint.get_playlist_items("test")
+    mock_get : mock.MagicMock = self.endpoint._session.get
     mock_get.assert_called_once()
