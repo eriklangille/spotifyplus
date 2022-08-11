@@ -11,7 +11,7 @@ REDIRECT_URI = f"http://localhost:{DEFAULT_PORT}/callback"
 SCOPE = "playlist-read-collaborative playlist-modify-public playlist-read-private playlist-modify-private"
 AUTH_URI = "https://accounts.spotify.com/authorize?"
 TOKEN_URI = "https://accounts.spotify.com/api/token"
-API_URI = "https://api.spotify.com/v1/"
+API_URI = "https://api.spotify.com/"
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 CLIENT_ID = os.environ.get("CLIENT_ID")
