@@ -31,6 +31,12 @@ def mocked_requests_get(uri : str, *args, **kwargs):
     json_data = json.load(f)
     json_func = mock.MagicMock(return_value=json_data)
     return MockResponse(json_data, json_func, 200)
+
+  if uri.startswith("v1/playlists/"):
+    f = open("./tests/samples/get_playlist.json")
+    json_data = json.load(f)
+    json_func = mock.MagicMock(return_value=json_data)
+    return MockResponse(json_data, json_func, 200)
   
   return MockResponse(None, None, 404)
 
@@ -40,10 +46,19 @@ def mocked_requests_session() -> mock.MagicMock:
   return real
 
 class TestPlaylistEndpoints(unittest.TestCase):
-  def test_get_playlist_items(self):
+  def setUp(self) -> None:
     self.endpoint = PlaylistEndpoints(mocked_requests_session())
+  
+  def test_get_playlist_items(self):
     playlist = self.endpoint.get_playlist_items("test")
     mock_get : mock.MagicMock = self.endpoint._session.get
     mock_get.assert_called_once()
     assert playlist.href.path == "/v1/playlists/1nYXOKEmZXnXRp31dCO031/tracks"
     assert playlist.href.path_sections[0] == "v1"
+
+  def test_get_playlist_items(self):
+    playlist = self.endpoint.get_playlist("test")
+    mock_get : mock.MagicMock = self.endpoint._session.get
+    mock_get.assert_called_once()
+    assert playlist.public == False
+    assert playlist.tracks.total == 6

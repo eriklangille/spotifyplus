@@ -3,6 +3,7 @@ from mashumaro.mixins.json import DataClassJSONMixin
 
 from splus.models.album import Album
 from splus.models.artist import Artist
+from splus.models.href import Href
 
 @dataclass
 class Track(DataClassJSONMixin):
@@ -15,7 +16,7 @@ class Track(DataClassJSONMixin):
   explicit: bool
   external_ids: dict
   external_urls: dict
-  href: str
+  href: Href
   id: str
   is_local: bool
   name: str

@@ -19,3 +19,6 @@ class Href(SerializableType):
     scheme, netloc, path, query, fragment = urlsplit(value)
     path_sections = path.lstrip('/').rstrip('/').split('/')
     return Href(scheme, netloc, path, path_sections, query, fragment)
+
+  def __repr__(self) -> str:
+    return self._serialize()
