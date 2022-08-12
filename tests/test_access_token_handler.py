@@ -16,6 +16,8 @@ TOKEN_DATA = {
   "refresh_token": "NgAagA...Um_SHo"
 }
 
+TOKEN_DATA_STR = json.dumps(TOKEN_DATA, indent=2, sort_keys=True)
+
 MOCK_ENCODE = "MTIzOmFiYw=="
 MOCK_DECODE = "123:abc"
 
@@ -73,3 +75,18 @@ class TestAccessTokenHandler(unittest.TestCase):
     assert token.is_expired() == False
     token.expires_in = 0
     assert token.is_expired() == True
+
+  @mock.patch("builtins.open", new_callable=mock.mock_open, read_data=TOKEN_DATA_STR)
+  def test_load_token(self, mock : mock.Mock):
+    expected_token = AccessToken.from_dict(TOKEN_DATA)
+    actual_token = self.auth.load_token()
+    mock.assert_called_once()
+    assert expected_token.access_token == actual_token.access_token
+
+  @mock.patch("json.dump")
+  @mock.patch("builtins.open", new_callable=mock.mock_open, read_data=TOKEN_DATA_STR)
+  def test_load_token(self, mock_op: mock.Mock, mock_dump : mock.Mock):
+    expected_token = AccessToken.from_dict(TOKEN_DATA)
+    self.auth.save_token(expected_token)
+    mock_op.assert_called_once()
+    mock_dump.assert_called_once_with(expected_token.to_dict(), fp=mock.ANY, indent=2, sort_keys=True)

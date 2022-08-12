@@ -1,8 +1,10 @@
 import requests
 import base64
+import json
 
 from splus import constants
 from splus.auth.access_token import AccessToken
+from splus.utils.storage import get_storage_location
 
 class AccessTokenHandler():
   def __init__(self):
@@ -14,6 +16,20 @@ class AccessTokenHandler():
   def refresh_token(self, token : AccessToken):
     if token.is_expired():
       return self._request_refresh_token()
+    return token
+  
+  def save_token(self, token : AccessToken):
+    token.to_json(self._dump)
+  
+  def _dump(self, obj : dict):
+    storage_path = get_storage_location()
+    with open(storage_path / 'token.json', 'w') as f:
+      json.dump(obj, fp=f, indent=2, sort_keys=True)
+
+  def load_token(self) -> AccessToken:
+    storage_path = get_storage_location()
+    with open(storage_path / 'token.json', 'r') as f:
+      token = AccessToken.from_json(f, json.load)
     return token
 
   def _request_access_token(self, code : str) -> AccessToken:
