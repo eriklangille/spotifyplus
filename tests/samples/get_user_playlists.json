@@ -1,0 +1,773 @@
+{
+  "href" : "https://api.spotify.com/v1/users/username/playlists?offset=0&limit=20",
+  "items" : [ {
+    "collaborative" : false,
+    "description" : "this is a test",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2ZYOaW7MqpWV5XcnZOq5QD"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2ZYOaW7MqpWV5XcnZOq5QD",
+    "id" : "2ZYOaW7MqpWV5XcnZOq5QD",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b27320783882533e669760741df2",
+      "width" : 640
+    } ],
+    "name" : "test123",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "Myw5MjA5YzQ3MDlkODYzODI5OTcyYTZiYmRkZmYzOWUwY2YzOGQ3ZTg0",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2ZYOaW7MqpWV5XcnZOq5QD/tracks",
+      "total" : 1
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2ZYOaW7MqpWV5XcnZOq5QD"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/0xf5VDSW45zFG0aAYpTKV8"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/0xf5VDSW45zFG0aAYpTKV8",
+    "id" : "0xf5VDSW45zFG0aAYpTKV8",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b273252f9cfc6028c6524297ed04ab67616d0000b2737513c4956ea5552caf02eab6ab67616d0000b2738deb51a13ccc6991ea4710c9ab67616d0000b273aacc3ddf3bfa01f4bd44cacc",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b273252f9cfc6028c6524297ed04ab67616d0000b2737513c4956ea5552caf02eab6ab67616d0000b2738deb51a13ccc6991ea4710c9ab67616d0000b273aacc3ddf3bfa01f4bd44cacc",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b273252f9cfc6028c6524297ed04ab67616d0000b2737513c4956ea5552caf02eab6ab67616d0000b2738deb51a13ccc6991ea4710c9ab67616d0000b273aacc3ddf3bfa01f4bd44cacc",
+      "width" : 60
+    } ],
+    "name" : "Tasteful3.0",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjIsY2E1NDY4YmNiMmZmNTBiMDNjNDJmOGQ4Nzg1MjIwZjc1YzRmN2FkMQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/0xf5VDSW45zFG0aAYpTKV8/tracks",
+      "total" : 16
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:0xf5VDSW45zFG0aAYpTKV8"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1nYXOKEmZXnXRp31dCO031"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1nYXOKEmZXnXRp31dCO031",
+    "id" : "1nYXOKEmZXnXRp31dCO031",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2732090f4f6cc406e6d3c306733ab67616d0000b2733160d88bde5dcf6849fee7dbab67616d0000b2734718e2b124f79258be7bc452ab67616d0000b2739416ed64daf84936d89e671c",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2732090f4f6cc406e6d3c306733ab67616d0000b2733160d88bde5dcf6849fee7dbab67616d0000b2734718e2b124f79258be7bc452ab67616d0000b2739416ed64daf84936d89e671c",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2732090f4f6cc406e6d3c306733ab67616d0000b2733160d88bde5dcf6849fee7dbab67616d0000b2734718e2b124f79258be7bc452ab67616d0000b2739416ed64daf84936d89e671c",
+      "width" : 60
+    } ],
+    "name" : "From the 6",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "OSw3Njk0MjQwODVjNGE4NmRiMGJmYjYyMWViYTJjZDgwOWIxMGFlMTEw",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1nYXOKEmZXnXRp31dCO031/tracks",
+      "total" : 6
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1nYXOKEmZXnXRp31dCO031"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/0xeZiBIKig7hvmiyvPUQNu"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/0xeZiBIKig7hvmiyvPUQNu",
+    "id" : "0xeZiBIKig7hvmiyvPUQNu",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273cada54c15af0a1da882f08f9",
+      "width" : 640
+    } ],
+    "name" : "Sample this",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NCxjMGM2NmMyNDk3ODc1NjJiYzdkYzcxMWJjZGQ0MmZmYmQ2MmRhOThh",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/0xeZiBIKig7hvmiyvPUQNu/tracks",
+      "total" : 2
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:0xeZiBIKig7hvmiyvPUQNu"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/78qdGTsN3iy0sishPzekPL"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/78qdGTsN3iy0sishPzekPL",
+    "id" : "78qdGTsN3iy0sishPzekPL",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2730e987064364e2b62ae1925b4ab67616d0000b2733d92b2ad5af9fbc8637425f0ab67616d0000b273a8df0c930a741d6f49cc3f8dab67616d0000b273e0dd719897dd60694ce7593d",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2730e987064364e2b62ae1925b4ab67616d0000b2733d92b2ad5af9fbc8637425f0ab67616d0000b273a8df0c930a741d6f49cc3f8dab67616d0000b273e0dd719897dd60694ce7593d",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2730e987064364e2b62ae1925b4ab67616d0000b2733d92b2ad5af9fbc8637425f0ab67616d0000b273a8df0c930a741d6f49cc3f8dab67616d0000b273e0dd719897dd60694ce7593d",
+      "width" : 60
+    } ],
+    "name" : "Coffee Shop",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjUsYjI1NDdkOGEzMTk4MmFmOTYyYWI2YjU3NDAyYjQ2NWNlNjZhMzk3Mg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/78qdGTsN3iy0sishPzekPL/tracks",
+      "total" : 23
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:78qdGTsN3iy0sishPzekPL"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2NMgCDbXaL3dkIPlBynTcG"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2NMgCDbXaL3dkIPlBynTcG",
+    "id" : "2NMgCDbXaL3dkIPlBynTcG",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b273b2f73abe14e38def3a2c4ea0ab67616d0000b273d5d6eb585292ad59edde6757ab67616d0000b273ef9142f9a526f7647ec0d24aab67616d0000b273fc541091552f24194317a127",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b273b2f73abe14e38def3a2c4ea0ab67616d0000b273d5d6eb585292ad59edde6757ab67616d0000b273ef9142f9a526f7647ec0d24aab67616d0000b273fc541091552f24194317a127",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b273b2f73abe14e38def3a2c4ea0ab67616d0000b273d5d6eb585292ad59edde6757ab67616d0000b273ef9142f9a526f7647ec0d24aab67616d0000b273fc541091552f24194317a127",
+      "width" : 60
+    } ],
+    "name" : "LET'S GO",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTAsMDVkY2NlMTVhMTYxOGU0MmRmMjgzZjExZDAzNjYzMzRlOGM5N2QwZQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2NMgCDbXaL3dkIPlBynTcG/tracks",
+      "total" : 8
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2NMgCDbXaL3dkIPlBynTcG"
+  }, {
+    "collaborative" : false,
+    "description" : "Spotify Wrapped presents the songs that you loved most this year.",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1EUMDoJuT8yJsl"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1EUMDoJuT8yJsl",
+    "id" : "37i9dQZF1EUMDoJuT8yJsl",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://lineup-images.scdn.co/wrapped-2021-top100_LARGE-en.jpg",
+      "width" : null
+    } ],
+    "name" : "Your Top Songs 2021",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MCwwMDAwMDAwMDQ2MmRhOTY5ODRiMjQyZTZlMWEzODMyMDA4ODA2Y2Vh",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1EUMDoJuT8yJsl/tracks",
+      "total" : 100
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1EUMDoJuT8yJsl"
+  }, {
+    "collaborative" : false,
+    "description" : "A selection of the greatest funk & soul records ever made.",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DWWvhKV4FBciw"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWWvhKV4FBciw",
+    "id" : "37i9dQZF1DWWvhKV4FBciw",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706f00000003e0113d1b6e16f0813877a9f9",
+      "width" : null
+    } ],
+    "name" : "Funk & Soul Classics",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTU5OTczMDIzOSwwMDAwMDAwMGRlZWY5MTk3ZmM1N2MyMmE3NzlkZTYxYWQ3NTQyMzEy",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWWvhKV4FBciw/tracks",
+      "total" : 80
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1DWWvhKV4FBciw"
+  }, {
+    "collaborative" : false,
+    "description" : "Favorites from all genres",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/5iUez4AwTM29vLBf3rRZ9h"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/5iUez4AwTM29vLBf3rRZ9h",
+    "id" : "5iUez4AwTM29vLBf3rRZ9h",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b273045fc920ecf4f8094888ec26ab67616d0000b2732af30c881bb23cfb82a8cf99ab67616d0000b273370c12f82872c9cfaee80193ab67616d0000b273a14b08b9a6616e121df5e8b0",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b273045fc920ecf4f8094888ec26ab67616d0000b2732af30c881bb23cfb82a8cf99ab67616d0000b273370c12f82872c9cfaee80193ab67616d0000b273a14b08b9a6616e121df5e8b0",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b273045fc920ecf4f8094888ec26ab67616d0000b2732af30c881bb23cfb82a8cf99ab67616d0000b273370c12f82872c9cfaee80193ab67616d0000b273a14b08b9a6616e121df5e8b0",
+      "width" : 60
+    } ],
+    "name" : "Assorted",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MTU4LGE3YzdkNjIzYmVhNGU3OWQ2OTE3Y2RjMjUxMmI1NzVmNWZjMzNmYmQ=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/5iUez4AwTM29vLBf3rRZ9h/tracks",
+      "total" : 66
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:5iUez4AwTM29vLBf3rRZ9h"
+  }, {
+    "collaborative" : false,
+    "description" : "Sample heavy and ft. The Alchemist",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/0JslXVqzikgyqjpR9FsVrB"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/0JslXVqzikgyqjpR9FsVrB",
+    "id" : "0JslXVqzikgyqjpR9FsVrB",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b27374acf6803bfe14852ea0d9baab67616d0000b273795e7069de7cb188b7c821b4ab67616d0000b273ce7846efcfc5dc8c0e37ba14ab67616d0000b273fc4a79e449fc949eedd12c4a",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b27374acf6803bfe14852ea0d9baab67616d0000b273795e7069de7cb188b7c821b4ab67616d0000b273ce7846efcfc5dc8c0e37ba14ab67616d0000b273fc4a79e449fc949eedd12c4a",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b27374acf6803bfe14852ea0d9baab67616d0000b273795e7069de7cb188b7c821b4ab67616d0000b273ce7846efcfc5dc8c0e37ba14ab67616d0000b273fc4a79e449fc949eedd12c4a",
+      "width" : 60
+    } ],
+    "name" : "😅👕Sweatshirt Ft",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTIsYWI4MWUxNmIyNDE2ZmIzODE0NzFiNjIwNzNmYTVlMGJjNDgxYmQxYg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/0JslXVqzikgyqjpR9FsVrB/tracks",
+      "total" : 8
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:0JslXVqzikgyqjpR9FsVrB"
+  }, {
+    "collaborative" : false,
+    "description" : "Gym playlist",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2owMxOAR0XYuqHWreooyA3"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2owMxOAR0XYuqHWreooyA3",
+    "id" : "2owMxOAR0XYuqHWreooyA3",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2731dacfbc31cc873d132958af9ab67616d0000b2735d3f0c9813fbd472618124a3ab67616d0000b27366eb95ddf82d0f2dac411508ab67616d0000b27393821d2002508edc459eb7c7",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2731dacfbc31cc873d132958af9ab67616d0000b2735d3f0c9813fbd472618124a3ab67616d0000b27366eb95ddf82d0f2dac411508ab67616d0000b27393821d2002508edc459eb7c7",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2731dacfbc31cc873d132958af9ab67616d0000b2735d3f0c9813fbd472618124a3ab67616d0000b27366eb95ddf82d0f2dac411508ab67616d0000b27393821d2002508edc459eb7c7",
+      "width" : 60
+    } ],
+    "name" : "Swole is the Goal",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "NDcsZTc3NzVmOWNmZWQ4ODdlNzEzY2VlOWQzNWI5ZDM1NmY3ZWM3MDg4Yg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2owMxOAR0XYuqHWreooyA3/tracks",
+      "total" : 33
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2owMxOAR0XYuqHWreooyA3"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7z2NzuScNwpcwEXeWPNzd7"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7z2NzuScNwpcwEXeWPNzd7",
+    "id" : "7z2NzuScNwpcwEXeWPNzd7",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2731675d50a0ba7919b5e5797feab67616d0000b2732e23d3a9165dbd93f48d6c43ab67616d0000b2739ff7b72aafa694ea70976267ab67616d0000b273c07f93ab8f9c2816122d2b3b",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2731675d50a0ba7919b5e5797feab67616d0000b2732e23d3a9165dbd93f48d6c43ab67616d0000b2739ff7b72aafa694ea70976267ab67616d0000b273c07f93ab8f9c2816122d2b3b",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2731675d50a0ba7919b5e5797feab67616d0000b2732e23d3a9165dbd93f48d6c43ab67616d0000b2739ff7b72aafa694ea70976267ab67616d0000b273c07f93ab8f9c2816122d2b3b",
+      "width" : 60
+    } ],
+    "name" : "Bri'ish",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTEsYjIxNTEwNDdmNDFjZWY5YWM0NmI3YTdjZWE3YTM3ZmI5M2ViMDFkOQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7z2NzuScNwpcwEXeWPNzd7/tracks",
+      "total" : 8
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7z2NzuScNwpcwEXeWPNzd7"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7BAYl04TCUwIbnTb6W1Ot9"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7BAYl04TCUwIbnTb6W1Ot9",
+    "id" : "7BAYl04TCUwIbnTb6W1Ot9",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2732af30c881bb23cfb82a8cf99ab67616d0000b2733ac318439ae56ce048d7bf5dab67616d0000b27374ecb94bc3e5d851a39a0334ab67616d0000b273afb855e6461310dff4046c56",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2732af30c881bb23cfb82a8cf99ab67616d0000b2733ac318439ae56ce048d7bf5dab67616d0000b27374ecb94bc3e5d851a39a0334ab67616d0000b273afb855e6461310dff4046c56",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2732af30c881bb23cfb82a8cf99ab67616d0000b2733ac318439ae56ce048d7bf5dab67616d0000b27374ecb94bc3e5d851a39a0334ab67616d0000b273afb855e6461310dff4046c56",
+      "width" : 60
+    } ],
+    "name" : "Rock",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjAsZGQ2Yzg0M2ZiZjE5NGQxNDZhNTIxMGQ3YWY3NGE2ZmZiZDIxMTg0Nw==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7BAYl04TCUwIbnTb6W1Ot9/tracks",
+      "total" : 19
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7BAYl04TCUwIbnTb6W1Ot9"
+  }, {
+    "collaborative" : false,
+    "description" : "rapping and singing? Blame Kanye",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/0ZLg5dX0zdOE4MeIOb19FD"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/0ZLg5dX0zdOE4MeIOb19FD",
+    "id" : "0ZLg5dX0zdOE4MeIOb19FD",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2731dacfbc31cc873d132958af9ab67616d0000b273346d77e155d854735410ed18ab67616d0000b27341b41e6f7924e530a9b00f9cab67616d0000b273f7db43292a6a99b21b51d5b4",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2731dacfbc31cc873d132958af9ab67616d0000b273346d77e155d854735410ed18ab67616d0000b27341b41e6f7924e530a9b00f9cab67616d0000b273f7db43292a6a99b21b51d5b4",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2731dacfbc31cc873d132958af9ab67616d0000b273346d77e155d854735410ed18ab67616d0000b27341b41e6f7924e530a9b00f9cab67616d0000b273f7db43292a6a99b21b51d5b4",
+      "width" : 60
+    } ],
+    "name" : "Melodic Raps",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTgsOTBlYTNlYjljNGY1YzA1YjMyYjZhYTYwMGU1NmFjZmUxMGI1MGRhZg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/0ZLg5dX0zdOE4MeIOb19FD/tracks",
+      "total" : 15
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:0ZLg5dX0zdOE4MeIOb19FD"
+  }, {
+    "collaborative" : false,
+    "description" : "Lyrical, lo-fi, and lowlife raps. Cover: The Game",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DWSTeI2WWFaia"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWSTeI2WWFaia",
+    "id" : "37i9dQZF1DWSTeI2WWFaia",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706f000000033adc54fd61847c23a6b1983b",
+      "width" : null
+    } ],
+    "name" : "Spilled Ink",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTY2MDI3NjgwMCwwMDAwMDAwMGVlYzYyMzQxMDU5YzYxZGYwYzE2YjJlMGE5ZDYzMDAy",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DWSTeI2WWFaia/tracks",
+      "total" : 50
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1DWSTeI2WWFaia"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/1mbfCExvYlgWLei4IeFG6a"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/1mbfCExvYlgWLei4IeFG6a",
+    "id" : "1mbfCExvYlgWLei4IeFG6a",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2732afde92aba9482770dec2203ab67616d0000b273e9166dea653ce1aa302d2916ab67616d0000b273fc7f9ae1e44265760fbe4c5aab67616d0000b273fd9f1660abcb440afb56ebcd",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2732afde92aba9482770dec2203ab67616d0000b273e9166dea653ce1aa302d2916ab67616d0000b273fc7f9ae1e44265760fbe4c5aab67616d0000b273fd9f1660abcb440afb56ebcd",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2732afde92aba9482770dec2203ab67616d0000b273e9166dea653ce1aa302d2916ab67616d0000b273fc7f9ae1e44265760fbe4c5aab67616d0000b273fd9f1660abcb440afb56ebcd",
+      "width" : 60
+    } ],
+    "name" : "Tasteful Archive",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "OTYsZDYzY2M0MWM3Yzg3MzgzNmZmZDQ5NWViNzI4ODQwMTI4OWM5MTBlNg==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/1mbfCExvYlgWLei4IeFG6a/tracks",
+      "total" : 92
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:1mbfCExvYlgWLei4IeFG6a"
+  }, {
+    "collaborative" : false,
+    "description" : "No tags, no labels - just free form. Cover: Lil Silva",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DX6mMeq1VVekF"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX6mMeq1VVekF",
+    "id" : "37i9dQZF1DX6mMeq1VVekF",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706f00000003c90ae095edcae969a60ca56a",
+      "width" : null
+    } ],
+    "name" : "Free Form",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTY1ODA3NDI3NywwMDAwMDAwMDIzMjkyMWVjZDJhNzZkZWU3YWFmYzhlNTcwZDlkMzA1",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX6mMeq1VVekF/tracks",
+      "total" : 60
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1DX6mMeq1VVekF"
+  }, {
+    "collaborative" : false,
+    "description" : "The best in modern indie. Cover: Steve Lacy ",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/37i9dQZF1DX2Nc3B70tvx0"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX2Nc3B70tvx0",
+    "id" : "37i9dQZF1DX2Nc3B70tvx0",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://i.scdn.co/image/ab67706f00000003b29656fd24b575493038b955",
+      "width" : null
+    } ],
+    "name" : "Ultimate Indie",
+    "owner" : {
+      "display_name" : "Spotify",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/spotify"
+      },
+      "href" : "https://api.spotify.com/v1/users/spotify",
+      "id" : "spotify",
+      "type" : "user",
+      "uri" : "spotify:user:spotify"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTY2MDI2NDgyNywwMDAwMDAwMDkyN2IxMDJkNzc5N2RiODg0YTQ1NWQwOGE2ODNlY2E5",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/37i9dQZF1DX2Nc3B70tvx0/tracks",
+      "total" : 75
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:37i9dQZF1DX2Nc3B70tvx0"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/0VybFw8qQcoSBqrqgEYQow"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/0VybFw8qQcoSBqrqgEYQow",
+    "id" : "0VybFw8qQcoSBqrqgEYQow",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2730905700f494c025d93b27a96ab67616d0000b273389f3292fad69d0d47a226e4ab67616d0000b273545dc34cf8c19770570d6342ab67616d0000b2738f14916deb5ec438bd130144",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2730905700f494c025d93b27a96ab67616d0000b273389f3292fad69d0d47a226e4ab67616d0000b273545dc34cf8c19770570d6342ab67616d0000b2738f14916deb5ec438bd130144",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2730905700f494c025d93b27a96ab67616d0000b273389f3292fad69d0d47a226e4ab67616d0000b273545dc34cf8c19770570d6342ab67616d0000b2738f14916deb5ec438bd130144",
+      "width" : 60
+    } ],
+    "name" : "Tasteful2.0",
+    "owner" : {
+      "display_name" : "Erik L",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/username"
+      },
+      "href" : "https://api.spotify.com/v1/users/username",
+      "id" : "username",
+      "type" : "user",
+      "uri" : "spotify:user:username"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NzgsYmRiNmY2NzNkN2Y5YmFhYWI3NzRkZDVkNGY4MTgzNjc2OWUwMGY2NQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/0VybFw8qQcoSBqrqgEYQow/tracks",
+      "total" : 36
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:0VybFw8qQcoSBqrqgEYQow"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/54L0RbmyLiHeSXbRM7PTvX"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/54L0RbmyLiHeSXbRM7PTvX",
+    "id" : "54L0RbmyLiHeSXbRM7PTvX",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b273286a0837ff3424065a735e0aab67616d0000b27351c02a77d09dfcd53c8676d0ab67616d0000b27368b03027356fb05501948f62ab67616d0000b273df55e326ed144ab4f5cecf95",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b273286a0837ff3424065a735e0aab67616d0000b27351c02a77d09dfcd53c8676d0ab67616d0000b27368b03027356fb05501948f62ab67616d0000b273df55e326ed144ab4f5cecf95",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b273286a0837ff3424065a735e0aab67616d0000b27351c02a77d09dfcd53c8676d0ab67616d0000b27368b03027356fb05501948f62ab67616d0000b273df55e326ed144ab4f5cecf95",
+      "width" : 60
+    } ],
+    "name" : "Rock & Roll",
+    "owner" : {
+      "display_name" : "Name",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/fmldfwa20fuehguosa6p67ae3"
+      },
+      "href" : "https://api.spotify.com/v1/users/fmldfwa20fuehguosa6p67ae3",
+      "id" : "fmldfwa20fuehguosa6p67ae3",
+      "type" : "user",
+      "uri" : "spotify:user:fmldfwa20fuehguosa6p67ae3"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjYzLGZkMjAxYjdhZDQ2MzdlYTExODlmNTYxZjA1ZWRjNDZmNGU0YTkxMWE=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/54L0RbmyLiHeSXbRM7PTvX/tracks",
+      "total" : 137
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:54L0RbmyLiHeSXbRM7PTvX"
+  } ],
+  "limit" : 20,
+  "next" : "https://api.spotify.com/v1/users/username/playlists?offset=20&limit=20",
+  "offset" : 0,
+  "previous" : null,
+  "total" : 39
+}
