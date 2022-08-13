@@ -1,15 +1,14 @@
+import abc
 from dataclasses import dataclass
 from mashumaro.mixins.json import DataClassJSONMixin
 from splus.models.href import Href
 
-from splus.models.item import Item
-
 @dataclass
-class Page(DataClassJSONMixin):
+class BasePage(DataClassJSONMixin, abc.ABC):
   href: Href
-  items: list[Item]
   limit: int
-  next: str or None
+  next: str
   offset: int
-  previous: str or None
+  previous: str
   total: int
+  items: list

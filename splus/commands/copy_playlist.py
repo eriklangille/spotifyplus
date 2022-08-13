@@ -1,13 +1,14 @@
 from splus.commands.base_command import BaseCommand
-from splus.endpoints.playlists import PlaylistEndpoints
 
-PLAYLIST_ID = "1nYXOKEmZXnXRp31dCO031"
-
-# Copies a playlist to a specified playlist, otherwise creating a new playlist. Override to delete all existing songs within the new playlist
+# Copies a playlist to a specified playlist, otherwise creating a new playlist.
 class CopyPlaylist(BaseCommand):
-  def run(self, old_playlist=PLAYLIST_ID, new_playlist : str = None):
-    playlists = PlaylistEndpoints(self._session)
-    playlists.get_playlist(old_playlist)
-    # page = playlists.get_playlist_items(old_playlist)
-    # for item in page.items: 
-    #   print(item.track.href)
+  def run(self, copy_from : str, copy_to : str = None):
+    playlist = self._endpoints.playlists.get_playlist(copy_from)
+    uris = list(map(lambda item: item.track.uri, playlist.tracks.items))
+
+    if not copy_to:
+      user = self._endpoints.users.get_me()
+      new_playlist = self._endpoints.playlists.create_playlist(user.id, playlist.name + " Copy", description=playlist.description)
+      copy_to = new_playlist.id
+
+    self._endpoints.playlists.add_playlist_items(copy_to, uris)

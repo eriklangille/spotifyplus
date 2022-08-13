@@ -1,10 +1,10 @@
 import abc
-from splus.auth.access_token import AccessToken
-from splus.utils.spotify_session import SpotifySession
+
+from splus.endpoints.factory import Endpoints
 
 class BaseCommand(abc.ABC):
-  def __init__(self, session : SpotifySession):
-    self._session = session
+  def __init__(self, endpoints : Endpoints):
+    self._endpoints = endpoints
   
   @abc.abstractmethod
   def run(self):

@@ -1,7 +1,5 @@
 from abc import ABC
 
-from requests import Response
-
 from splus.utils.spotify_session import SpotifySession
 
 class BaseEndpoint(ABC):
