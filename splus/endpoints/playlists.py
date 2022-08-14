@@ -6,7 +6,6 @@ from splus.models.playlist import Playlist
 class PlaylistEndpoints(BaseEndpoint):
   def get_playlist(self, playlist_id: str) -> Playlist[ItemPage]:
     res = self._session.get(f'playlists/{playlist_id}')
-    # print(res.text)
     return Playlist[ItemPage].from_dict(res.json())
 
   def get_playlist_items(self, playlist_id : str) -> ItemPage:
