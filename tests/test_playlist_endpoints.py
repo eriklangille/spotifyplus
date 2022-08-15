@@ -18,6 +18,8 @@ class TestPlaylistEndpoints(unittest.TestCase):
         .returns_json_from_file('get_playlist.json')
       .add_condition(RequestType.POST, lambda uri, json: uri.startswith("playlists/") and uri.endswith("/tracks"))
         .returns_json_from_dict({"snapshot_id": "abcde"})
+      .add_condition(RequestType.DELETE, lambda uri, json: uri.startswith("playlists/") and uri.endswith("/tracks"))
+        .returns_json_from_dict({"snapshot_id": "abcde"})
       .build()
     )
     self.endpoint = PlaylistEndpoints(mock_session)
@@ -62,5 +64,17 @@ class TestPlaylistEndpoints(unittest.TestCase):
     }
     snapshot = self.endpoint.add_playlist_items("test", ["abc", "def"])
     mock_post : mock.MagicMock = self.endpoint._session.post
+    mock_post.assert_called_with("playlists/test/tracks", json=test_json)
+    assert snapshot == "abcde"
+  
+  def test_remove_playlist_items(self):
+    test_json = {
+      "tracks": [
+        {"uri": "abc"},
+        {"uri": "def"}
+      ]
+    }
+    snapshot = self.endpoint.remove_playlist_items("test", ["abc", "def"])
+    mock_post : mock.MagicMock = self.endpoint._session.delete
     mock_post.assert_called_with("playlists/test/tracks", json=test_json)
     assert snapshot == "abcde"
