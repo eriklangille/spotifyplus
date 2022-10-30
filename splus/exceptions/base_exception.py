@@ -6,3 +6,6 @@ class BaseRequestException(Exception):
   
   def _get_error_message(self, info: str) -> str:
     return f"{info}. Message: {self.error.message}"
+  
+  def __repr__(self) -> str:
+    return self._get_error_message(self.error.status)

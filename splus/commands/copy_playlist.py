@@ -1,3 +1,4 @@
+from typing import Tuple
 from splus.commands.base_command import BaseCommand
 
 # Copies a playlist to a specified playlist, otherwise creating a new playlist.
@@ -12,3 +13,9 @@ class CopyPlaylist(BaseCommand):
       copy_to = new_playlist.id
 
     self._endpoints.playlists.add_playlist_items(copy_to, uris)
+  
+  def help(self) -> str:
+    return "Copies a playlist to a specified playlist, otherwise creating a new playlist."
+
+  def name(self) -> Tuple[str, str]:
+    return ("copy_playlist", "cp")
