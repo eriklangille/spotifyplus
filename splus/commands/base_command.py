@@ -1,6 +1,7 @@
 import abc
 import inspect
 from collections.abc import ItemsView
+from typing import Tuple
 
 from splus.endpoints.factory import Endpoints
 
@@ -10,7 +11,15 @@ class BaseCommand(abc.ABC):
   
   @abc.abstractmethod
   def run(self, *args, **kwargs):
-    pass
+    ...
+
+  @abc.abstractmethod
+  def help(self) -> str:
+    ...
+
+  @abc.abstractmethod
+  def name(self) -> Tuple[str, str]:
+    ...
 
   def get_parameters(self) -> ItemsView[str, inspect.Parameter]:
     sig = inspect.signature(self.run)
