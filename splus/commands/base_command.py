@@ -8,13 +8,14 @@ from splus.endpoints.factory import Endpoints
 class BaseCommand(abc.ABC):
   def __init__(self, endpoints : Endpoints):
     self._endpoints = endpoints
+    self._parameters: dict[str, str] = {}
   
   @abc.abstractmethod
   def run(self, *args, **kwargs):
     ...
 
   @abc.abstractmethod
-  def help(self) -> str:
+  def help(self) -> list[str]:
     ...
 
   @abc.abstractmethod

@@ -8,7 +8,7 @@ from splus.commands.copy_playlist import CopyPlaylist
 from splus.commands.list_playlists import ListPlaylist
 from splus.endpoints.factory import Endpoints
 
-COMMANDS : Type[BaseCommand] = [CopyPlaylist, ListPlaylist]
+COMMANDS : list[Type[BaseCommand]] = [CopyPlaylist, ListPlaylist]
 DESCRIPTION = "Spotify Plus. A CLI tool for doing bulk actions and power user commands."
 
 class CommandFactory():
@@ -23,14 +23,18 @@ class CommandFactory():
     command_args.run_command()
   
   def _add_command(self, command: BaseCommand):
-    cmd_parser = self.sub_parser.add_parser(command.name()[0], help=command.help())
+    cmd_parser = self.sub_parser.add_parser(command.name()[0], help=command.help()[0])
     self._add_args(cmd_parser, command)
   
   def _add_args(self, parser : argparse.ArgumentParser, command : BaseCommand):
-    for parameter_name, parameter in command.get_parameters():
+    help = command.help()
+    command_help = ""
+    for index, (parameter_name, parameter) in enumerate(command.get_parameters()):
+      if index < len(help):
+        command_help = help[index + 1]
       if parameter.default == inspect._empty:
-        parser.add_argument(parameter_name, type=parameter.annotation)
+        parser.add_argument(parameter_name, type=parameter.annotation, help=command_help)
       else:
-        parser.add_argument(f"--{parameter_name}", type=parameter.annotation, default=parameter.default)
+        parser.add_argument(f"--{parameter_name}", type=parameter.annotation, default=parameter.default, help=command_help)
     parser.set_defaults(command=command)
     
