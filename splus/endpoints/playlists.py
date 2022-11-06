@@ -35,7 +35,7 @@ class PlaylistEndpoints(BaseEndpoint):
     res = self._session.post(f'playlists/{playlist_id}/tracks', json=json)
     return res.json()['snapshot_id']
   
-  def remove_playlist_items(self, playlist_id : str, uris: list[str], snapshot_id : str = None):
+  def remove_playlist_items(self, playlist_id : str, uris: list[str], snapshot_id : str = ""):
     json = {
       "tracks": list(map(lambda uri: {"uri": uri}, uris))
     }

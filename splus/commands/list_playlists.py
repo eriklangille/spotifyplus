@@ -9,8 +9,8 @@ class ListPlaylist(BaseCommand):
     for playlist in playlists.items:
       print(playlist.id, playlist.name)
   
-  def help(self) -> str:
-    return "Lists all playlists created by the user."
+  def help(self) -> list[str]:
+    return ["Lists all playlists created by the user."]
 
   def name(self) -> Tuple[str, str]:
     return ("list_playlist", "lp")
