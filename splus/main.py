@@ -7,7 +7,7 @@ from splus.endpoints.factory import Endpoints
 def main():
   auth = Authenticate()
   handler = AccessTokenHandler()
-  token : AccessToken = None
+  token: AccessToken
 
   try:
     token = handler.load_token()

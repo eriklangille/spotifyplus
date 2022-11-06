@@ -1,9 +1,9 @@
 import json
 from unittest import mock
-from typing import Protocol, Union
+from typing import Protocol, Union, Optional, TypeVar
 from enum import Enum
 
-from requests import Session
+from requests import Session, Request
 
 from splus import constants
 from splus.utils.spotify_session import SpotifySession
@@ -20,7 +20,7 @@ TOKEN_DATA = {
 }
 
 class ResponseCallable(Protocol):
-  def __call__(self, uri: str, *args, **kwargs) -> bool: ...
+  def __call__(self, request: Request) -> bool: ...
 
 class RequestType(Enum):
   GET = 1
@@ -44,9 +44,9 @@ class MockResponseBuilder:
     self._requests[req_type].append(mock_reponse_condition)
     return mock_reponse_condition
 
-  def _mocked_request(self, req_type: RequestType, uri : str, *args, **kwargs):
+  def _mocked_request(self, req_type: RequestType, url, *args, **kwargs):
     for request in self._requests[req_type]:
-      if request._condition(uri, *args, **kwargs):
+      if request._condition(Request(url=url, *args, **kwargs)):
         if isinstance(request._response, str):
           with open(f"{SAMPLE_JSON_DIR}{request._response}") as f:
             json_data = json.load(f)
@@ -67,22 +67,22 @@ class MockResponseBuilder:
     def json(self):
       return self.json_data
 
-  def _mocked_requests_get(self, uri : str, *args, **kwargs):
-    return self._mocked_request(RequestType.GET, uri, *args, **kwargs)
+  def _mocked_requests_get(self, url : str, *args, **kwargs):
+    return self._mocked_request(RequestType.GET, url, *args, **kwargs)
 
-  def _mocked_requests_post(self, uri : str, *args, **kwargs):
-    return self._mocked_request(RequestType.POST, uri, *args, **kwargs)
+  def _mocked_requests_post(self, url : str, *args, **kwargs):
+    return self._mocked_request(RequestType.POST, url, *args, **kwargs)
 
-  def _mocked_requests_put(self, uri : str, *args, **kwargs):
-    return self._mocked_request(RequestType.PUT, uri, *args, **kwargs)
+  def _mocked_requests_put(self, url : str, *args, **kwargs):
+    return self._mocked_request(RequestType.PUT, url, *args, **kwargs)
 
-  def _mocked_requests_delete(self, uri : str, *args, **kwargs):
-    return self._mocked_request(RequestType.DELETE, uri, *args, **kwargs)
+  def _mocked_requests_delete(self, url : str, *args, **kwargs):
+    return self._mocked_request(RequestType.DELETE, url, *args, **kwargs)
 
-  def _mocked_requests_patch(self, uri : str, *args, **kwargs):
-    return self._mocked_request(RequestType.PATCH, uri, *args, **kwargs)
+  def _mocked_requests_patch(self, url : str, *args, **kwargs):
+    return self._mocked_request(RequestType.PATCH, url, *args, **kwargs)
   
-  def build(self, session : Session = None):
+  def build(self, session: Optional[Session] = None) -> Session:
     if session:
       real = session
     else:
@@ -98,7 +98,7 @@ class MockResponseCondition:
   def __init__(self, builder: MockResponseBuilder, condition : ResponseCallable):
     self._builder = builder
     self._condition = condition
-    self._response : Union[str, dict] = None
+    self._response : Union[str, dict] = {}
   
   def returns_json_from_file(self, file_name: str):
     self._response = file_name
