@@ -2,6 +2,7 @@ import unittest
 import base64
 import requests
 import json
+from typing import cast
 from unittest import mock
 from splus.auth.access_token_handler import AccessTokenHandler
 from splus.auth.access_token import AccessToken
@@ -21,7 +22,7 @@ class TestAccessTokenHandler(unittest.TestCase):
     self.auth = AccessTokenHandler()
     self.auth._session = (
       MockResponseBuilder()
-      .add_condition(RequestType.POST, lambda uri, **kwargs: uri == constants.TOKEN_URI)
+      .add_condition(RequestType.POST, lambda request: request.url == constants.TOKEN_URI)
         .returns_json_from_dict(TOKEN_DATA)
       .build(session=requests.Session())
     )
@@ -30,7 +31,7 @@ class TestAccessTokenHandler(unittest.TestCase):
     expected_token = AccessToken.from_dict(TOKEN_DATA)
     actual_token = self.auth._request_access_token("abcdef")
 
-    mock_post : mock.MagicMock = self.auth._session.post
+    mock_post = cast(mock.MagicMock, self.auth._session.post)
     mock_post.assert_called_once()
     assert expected_token.access_token == actual_token.access_token
 
@@ -60,7 +61,7 @@ class TestAccessTokenHandler(unittest.TestCase):
 
   @mock.patch("json.dump")
   @mock.patch("builtins.open", new_callable=mock.mock_open, read_data=TOKEN_DATA_STR)
-  def test_load_token(self, mock_op: mock.Mock, mock_dump : mock.Mock):
+  def test_save_token(self, mock_op: mock.Mock, mock_dump : mock.Mock):
     expected_token = AccessToken.from_dict(TOKEN_DATA)
     self.auth.save_token(expected_token)
     mock_op.assert_called_once()
